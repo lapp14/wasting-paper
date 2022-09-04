@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const path = require('path')
+const fs = require('fs')
 const { createFilePath } = require('gatsby-source-filesystem')
 
 exports.createPages = ({ actions, graphql }) => {
@@ -32,17 +33,22 @@ exports.createPages = ({ actions, graphql }) => {
 
     posts.forEach((edge) => {
       const id = edge.node.id
-      createPage({
-        path: edge.node.fields.slug,
-        tags: edge.node.frontmatter.tags,
-        component: path.resolve(
-          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
-        ),
-        // additional data can be passed via context
-        context: {
-          id,
-        },
-      })
+      const component = path.resolve(`src/templates/${String(edge.node.frontmatter.templateKey)}.js`)
+
+      if (fs.existsSync(component)) {
+        createPage({
+          path: edge.node.fields.slug,
+          tags: edge.node.frontmatter.tags,
+          component,
+          // additional data can be passed via context
+          context: {
+            id,
+          },
+        })
+      } else {
+        console.log('Component doesnt exist, skipping "' + component + '"')
+      }
+
     })
 
     // Tag pages:

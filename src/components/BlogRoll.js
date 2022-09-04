@@ -5,18 +5,16 @@ import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 
 const BlogRollTemplate = (props) => {
-  
+
   const { edges: posts } = props.data.allMarkdownRemark;
 
   return (
-    <div className="columns is-multiline">
+    <div>
       {posts &&
         posts.map(({ node: post }) => (
-          <div className="is-parent column is-6" key={post.id}>
+          <div key={post.id}>
             <article
-              className={`blog-list-item tile is-child box notification ${
-                post.frontmatter.featuredpost ? 'is-featured' : ''
-              }`}
+              className={`${post.frontmatter.featuredpost ? 'is-featured' : ''}`}
             >
               <header>
                 {post?.frontmatter?.featuredimage && (
@@ -34,7 +32,7 @@ const BlogRollTemplate = (props) => {
                       }}
                     />
                   </div>
-                ) }
+                )}
                 <p className="post-meta">
                   <Link
                     className="title has-text-primary is-size-4"
