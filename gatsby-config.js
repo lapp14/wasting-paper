@@ -6,6 +6,9 @@ if (!fallbackUrl) {
 }
 
 const siteUrl = process.env.URL || fallbackUrl;
+
+// gatsby-plugin-sitemap should always provide accurate `lastmod` date
+// See: https://www.gatsbyjs.com/plugins/gatsby-plugin-sitemap/#recommended-usage
 const gatsbySitemapOptions = {
   query: `
         {
