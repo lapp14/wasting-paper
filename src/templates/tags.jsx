@@ -3,8 +3,8 @@ import { Helmet } from 'react-helmet';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/Layout';
 
-function TagRoute(props) {
-  const posts = props.data.allMarkdownRemark.edges;
+function TagRoute({ data, pageContext }) {
+  const posts = data.allMarkdownRemark.edges;
 
   const postLinks = posts.map((post) => (
     <li key={post.node.fields.slug}>
@@ -14,12 +14,11 @@ function TagRoute(props) {
     </li>
   ));
 
-  const { tag } = props.pageContext;
-  const { title } = props.data.site.siteMetadata;
-  const { totalCount } = props.data.allMarkdownRemark;
-  const tagHeader = `${totalCount} post${
-    totalCount === 1 ? '' : 's'
-  } tagged with “${tag}”`;
+  const { tag } = pageContext;
+  const { title } = data.site.siteMetadata;
+  const { totalCount } = data.allMarkdownRemark;
+  const tagHeader = `${totalCount} post${totalCount === 1 ? '' : 's'
+    } tagged with “${tag}”`;
 
   return (
     <Layout>

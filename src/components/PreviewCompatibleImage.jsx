@@ -33,8 +33,10 @@ function PreviewCompatibleImage({ imageInfo }) {
 PreviewCompatibleImage.propTypes = {
   imageInfo: PropTypes.shape({
     alt: PropTypes.string,
+    // eslint-disable-next-line react/forbid-prop-types
     childImageSharp: PropTypes.object,
     image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
+    // eslint-disable-next-line react/forbid-prop-types
     style: PropTypes.object,
   }).isRequired,
 };

@@ -22,58 +22,61 @@ exports.createPages = ({ actions, graphql }) => {
           }
         }
       }
-    }
-  `).then((result) => {
-    if (result.errors) {
-      result.errors.forEach((e) => console.error(e.toString()));
-      return Promise.reject(result.errors);
-    }
+    }`)
+    // eslint-disable-next-line consistent-return
+    .then((result) => {
+      if (result.errors) {
+        // eslint-disable-next-line no-console
+        result.errors.forEach((e) => console.error(e.toString()));
+        return Promise.reject(result.errors);
+      }
 
-    const posts = result.data.allMarkdownRemark.edges;
+      const posts = result.data.allMarkdownRemark.edges;
 
-    posts.forEach((edge) => {
-      const { id } = edge.node;
-      const component = path.resolve(`src/templates/${String(edge.node.frontmatter.templateKey)}.js`);
+      posts.forEach((edge) => {
+        const { id } = edge.node;
+        const component = path.resolve(`src/templates/${String(edge.node.frontmatter.templateKey)}.js`);
 
-      if (fs.existsSync(component)) {
+        if (fs.existsSync(component)) {
+          createPage({
+            path: edge.node.fields.slug,
+            tags: edge.node.frontmatter.tags,
+            component,
+            // additional data can be passed via context
+            context: {
+              id,
+            },
+          });
+        } else {
+          // eslint-disable-next-line no-console
+          console.log(`Component doesnt exist, skipping "${component}"`);
+        }
+      });
+
+      // Tag pages:
+      let tags = [];
+      // Iterate through each post, putting all found tags into `tags`
+      posts.forEach((edge) => {
+        if (_.get(edge, 'node.frontmatter.tags')) {
+          tags = tags.concat(edge.node.frontmatter.tags);
+        }
+      });
+      // Eliminate duplicate tags
+      tags = _.uniq(tags);
+
+      // Make tag pages
+      tags.forEach((tag) => {
+        const tagPath = `/tags/${_.kebabCase(tag)}/`;
+
         createPage({
-          path: edge.node.fields.slug,
-          tags: edge.node.frontmatter.tags,
-          component,
-          // additional data can be passed via context
+          path: tagPath,
+          component: path.resolve('src/templates/tags.js'),
           context: {
-            id,
+            tag,
           },
         });
-      } else {
-        console.log(`Component doesnt exist, skipping "${component}"`);
-      }
-    });
-
-    // Tag pages:
-    let tags = [];
-    // Iterate through each post, putting all found tags into `tags`
-    posts.forEach((edge) => {
-      if (_.get(edge, 'node.frontmatter.tags')) {
-        tags = tags.concat(edge.node.frontmatter.tags);
-      }
-    });
-    // Eliminate duplicate tags
-    tags = _.uniq(tags);
-
-    // Make tag pages
-    tags.forEach((tag) => {
-      const tagPath = `/tags/${_.kebabCase(tag)}/`;
-
-      createPage({
-        path: tagPath,
-        component: path.resolve('src/templates/tags.js'),
-        context: {
-          tag,
-        },
       });
     });
-  });
 };
 
 exports.onCreateNode = ({ node, actions, getNode }) => {

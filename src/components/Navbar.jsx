@@ -17,6 +17,7 @@ function Navbar() {
           </Link>
           {/* Hamburger menu */}
           <button
+            type="button"
             className={`navbar-burger burger ${isActive && 'is-active'}`}
             aria-expanded={isActive}
             onClick={() => setIsActive(!isActive)}

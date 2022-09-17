@@ -14,6 +14,11 @@ Content.propTypes = {
   className: PropTypes.string,
 };
 
+Content.defaultProps = {
+  content: null,
+  className: '',
+};
+
 HTMLContent.propTypes = Content.propTypes;
 
 export default Content;
