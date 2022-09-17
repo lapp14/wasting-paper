@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { Link } from "gatsby";
+import React, { useState } from 'react';
+import { Link } from 'gatsby';
 
-const Navbar = () => {
+function Navbar() {
   const [isActive, setIsActive] = useState(false);
 
   return (
@@ -17,7 +17,7 @@ const Navbar = () => {
           </Link>
           {/* Hamburger menu */}
           <button
-            className={`navbar-burger burger ${isActive && "is-active"}`}
+            className={`navbar-burger burger ${isActive && 'is-active'}`}
             aria-expanded={isActive}
             onClick={() => setIsActive(!isActive)}
           >
@@ -26,9 +26,9 @@ const Navbar = () => {
             <span />
           </button>
         </div>
-        <ul id="navMenu" className={` navbar-start has-text-centered navbar-menu ${isActive && "is-active"}`}>
+        <ul id="navMenu" className={` navbar-start has-text-centered navbar-menu ${isActive && 'is-active'}`}>
 
-          <li className="navbar-item" style={{ padding: "0px" }}>
+          <li className="navbar-item" style={{ padding: '0px' }}>
             <Link className="navbar-item" to="/blog">
               Blog
             </Link>
@@ -38,6 +38,6 @@ const Navbar = () => {
       </div>
     </nav>
   );
-};
+}
 
 export default Navbar;

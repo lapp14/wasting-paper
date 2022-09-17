@@ -1,17 +1,15 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link, graphql, StaticQuery } from 'gatsby'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link, graphql, StaticQuery } from 'gatsby';
+import PreviewCompatibleImage from './PreviewCompatibleImage';
 
-
-const BlogRollTemplate = (props) => {
-
+function BlogRollTemplate(props) {
   const { edges: posts } = props.data.allMarkdownRemark;
 
   return (
     <div>
-      {posts &&
-        posts.map(({ node: post }) => (
+      {posts
+        && posts.map(({ node: post }) => (
           <div key={post.id}>
             <article
               className={`${post.frontmatter.featuredpost ? 'is-featured' : ''}`}
@@ -58,7 +56,7 @@ const BlogRollTemplate = (props) => {
           </div>
         ))}
     </div>
-  )
+  );
 }
 
 BlogRoll.propTypes = {
@@ -67,8 +65,7 @@ BlogRoll.propTypes = {
       edges: PropTypes.array,
     }),
   }),
-}
-
+};
 
 export default function BlogRoll() {
   return (

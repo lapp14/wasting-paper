@@ -1,8 +1,7 @@
-import * as React from "react";
-import { Link } from "gatsby";
+import * as React from 'react';
+import { Link } from 'gatsby';
 
-const Footer = () => {
-
+function Footer() {
   return (
     <footer>
       Footer
@@ -11,6 +10,6 @@ const Footer = () => {
       </Link>
     </footer>
   );
-};
+}
 
 export default Footer;
