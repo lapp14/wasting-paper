@@ -1,0 +1,85 @@
+@import "_variables.scss";
+
+$footer-section-margins: $spacing-xl;
+$footer-column-margins: $spacing-xl;
+$footer-item-spacing: $spacing-s;
+
+footer {
+    background: $color-background-footer;
+    padding: $footer-padding;
+}
+
+.footer-container {
+    display: flex;
+    max-width: $footer-content-max-width;
+    margin: 0 auto;
+}
+
+/* columns */
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: $footer-item-spacing;
+    margin: 0 $footer-column-margins;
+}
+
+.footer-links {
+    margin: 0 $footer-column-margins;
+}
+/***/
+
+.footer-social {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: $footer-section-margins;
+    margin-bottom: $footer-section-margins;
+    gap: $footer-item-spacing;
+}
+
+.footer-brand--link {
+    font-size: $font-size-l;
+}
+
+.footer-brand--link a {
+    color: $font-color-alternate;
+    text-decoration: none;
+
+    &:hover {
+        color: $color-alternate;
+    }
+}
+
+.footer-address {
+    font-size: $font-size-s;
+    color: $color-white;
+}
+
+.footer-telephone {
+    color: $font-color-alternate;
+
+    &:hover {
+        color: $color-alternate;
+    }
+}
+
+.footer-links ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: $footer-section-margins;
+    margin-bottom: $footer-section-margins;
+    gap: $footer-item-spacing;
+}
+.footer-links ul li {
+    margin: 0 $footer-item-spacing;
+}
+
+.footer-links a {
+    color: $font-color-alternate;
+    text-decoration: none;
+
+    &:hover {
+        color: $color-alternate;
+    }
+}

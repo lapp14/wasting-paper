@@ -1,0 +1,49 @@
+{
+    "name": "netlify-cms-next-base",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "next",
+        "build": "next build",
+        "start": "next start",
+        "export": "npm run build && next export",
+        "lint": "eslint ."
+    },
+    "engines": {
+        "node": ">=16.17.0 <17"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@emotion/react": "^11.10.5",
+        "@emotion/styled": "^11.10.5",
+        "@mui/icons-material": "^5.10.16",
+        "@mui/material": "^5.10.17",
+        "gray-matter": "^4.0.3",
+        "next": "^12.3.0",
+        "phone": "^3.1.30",
+        "prop-types": "^15.8.1",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "remark": "^13.0.0",
+        "remark-html": "^13.0.1",
+        "sass": "^1.54.9"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.19.1",
+        "@babel/preset-react": "^7.18.6",
+        "eslint": "^8.26.0",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-jsx-a11y": "^6.6.1",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-react": "^7.31.10",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "frontmatter-markdown-loader": "^3.7.0",
+        "prettier": "^2.7.1"
+    }
+}
