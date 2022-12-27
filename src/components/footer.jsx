@@ -1,5 +1,5 @@
 import React from "react";
-import { phone } from "phone";
+// import { phone } from "phone";
 import Link from "next/link";
 import Image from "next/image";
 import navigation from "../navigation";
@@ -8,11 +8,11 @@ import profile from "../profile";
 const SOCIAL_ICON_COLOR = "white"; // white or black
 const SOCIAL_ICON_WIDTH = 36;
 
-const telephone = phone(profile.telephone);
+// const telephone = phone(profile.telephone);
 
-if (!telephone.isValid) {
-  throw new Error("Invalid telephone number in `profile.js`");
-}
+// if (!telephone.isValid) {
+//   throw new Error("Invalid telephone number in `profile.js`");
+// }
 
 function closeMobileMenu() {
   if (typeof document !== "undefined") {
@@ -26,7 +26,7 @@ function Footer() {
       <div className="footer-container">
         <div className="footer-brand">
           <span className="footer-brand--link">
-            <Link href="/">Brand</Link>
+            <Link href="/">Wasting Paper</Link>
           </span>
           <div className="footer-address">
             {profile.address.map((line, i) => (
@@ -36,9 +36,9 @@ function Footer() {
               </React.Fragment>
             ))}
           </div>
-          <a href={`tel:${telephone.phoneNumber}`} className="footer-telephone">
+          {/* <a href={`tel:${telephone.phoneNumber}`} className="footer-telephone">
             {profile.telephone}
-          </a>
+          </a> */}
 
           <div className="footer-social">
             {/* Social icons courtesy of https://www.iconfinder.com/icons/7693327 */}

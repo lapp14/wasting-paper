@@ -14,15 +14,27 @@ header > nav {
     margin: 0 $spacing-m;
 }
 
-header > nav > .brand {
+.brand {
+    width: $logo-size;
+    height: $logo-size;
     text-decoration: none;
     color: $color-font;
     font-size: $font-size-l;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
-header > nav > .brand > a {
+.brand > a {
     text-decoration: none;
     color: $color-font;
+}
+
+.header-logo {
+    position: relative;
+    height: 100px;
+    width: 100px;
 }
 
 .collapsible-menu {

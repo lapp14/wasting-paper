@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,100;1,300&display=swap");
 
 /* constants */
-$header-height: 64px;
+$header-height: 118px;
 
 /* breakpoints */
 $breakpoint-mobile: 600px;
@@ -28,6 +28,7 @@ $color-grey-dark: #333;
 $color-black: #000;
 $color-blue: #056ce3;
 $color-alternate: hsl(101, 92%, 58%);
+$color-pink: #ff43b2;
 
 $color-alert: #c61515;
 
@@ -35,6 +36,7 @@ $color-alert: #c61515;
 // tablet and desktop screens
 $font-base-size-lg: 18px;
 $font-base-lineheight-lg: 1.7rem;
+$logo-size: 100px;
 
 // mobile screens
 $font-base-size-sm: 16px;
@@ -86,13 +88,13 @@ $content-max-width: 900px;
 $footer-content-max-width: 1200px;
 
 /* color assignments */
-$color-header: $color-grey-light;
+$color-header: #13c9d2;
 $color-mobile-menu-background: $color-grey-dark;
 $color-mobile-menu-link-bg-hover: lighten($color-grey-dark, 10%);
 $color-mobile-menu-link: $color-grey-light;
 
 $color-menu-link: $color-grey-dark;
-$color-menu-link-bg-hover: darken($color-grey-light, 10%);
+$color-menu-link-bg-hover: $color-white;
 
 $color-background: $color-white;
 $color-font: $color-black;

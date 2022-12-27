@@ -13,6 +13,7 @@ footer {
     display: flex;
     max-width: $footer-content-max-width;
     margin: 0 auto;
+    flex-direction: column;
 }
 
 /* columns */
@@ -25,6 +26,28 @@ footer {
 
 .footer-links {
     margin: 0 $footer-column-margins;
+}
+
+.footer-links ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: $footer-section-margins;
+    margin-bottom: $footer-section-margins;
+    gap: $footer-item-spacing;
+}
+
+.footer-links ul li {
+    margin: 0 $footer-item-spacing;
+}
+
+.footer-links a {
+    color: $font-color-alternate;
+    text-decoration: none;
+
+    &:hover {
+        color: $color-alternate;
+    }
 }
 /***/
 
@@ -63,23 +86,8 @@ footer {
     }
 }
 
-.footer-links ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    margin-top: $footer-section-margins;
-    margin-bottom: $footer-section-margins;
-    gap: $footer-item-spacing;
-}
-.footer-links ul li {
-    margin: 0 $footer-item-spacing;
-}
-
-.footer-links a {
-    color: $font-color-alternate;
-    text-decoration: none;
-
-    &:hover {
-        color: $color-alternate;
+@media (min-width: $breakpoint-mobile) {
+    .footer-container {
+        flex-direction: row;
     }
 }

@@ -14,10 +14,6 @@ const navigation = [
     href: "/about",
   },
   {
-    title: "List",
-    href: "/list",
-  },
-  {
     title: "Contact Us",
     href: "/contact",
   },

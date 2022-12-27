@@ -1,13 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
+import Image from "next/image";
 import navigation from "../src/navigation";
 import Footer from "../src/components/footer";
 // import Alert from "../src/components/alert";
+
+import logo from "../public/static/img/logo.png";
 import "../styles/reset.css";
 import "../styles/global.scss";
 import "../styles/header.scss";
 import "../styles/footer.scss";
+import "../styles/pages.scss";
 
 function closeMobileMenu() {
   if (typeof document !== "undefined") {
@@ -22,7 +26,9 @@ function App({ Component, pageProps }) {
         {/* <Alert /> */}
         <nav>
           <div className="brand">
-            <Link href="/">Brand</Link>
+            <Link href="/">
+              <Image src={logo} />
+            </Link>
           </div>
 
           <div className="collapsible-menu">

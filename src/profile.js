@@ -1,8 +1,8 @@
 const profile = {
   // Array of strings, each string is on a newline
-  address: ["1 Bonnyview", "Dartmouth, NS", "Canada"],
+  address: ["Rock band extrordinare.", "Hamilton, ON", "Canada"],
   // Format phone number as you would like to see on the site
-  telephone: "(416) 888-8888",
+  // telephone: "(416) 888-8888",
   social: {
     facebook: {
       link: "#",
