@@ -1,0 +1,19 @@
+@import "_variables.scss";
+
+.image__polaroid {
+    width: 180px;
+}
+
+@media (min-width: $breakpoint-mobile) {
+    .image__polaroid {
+        flex-basis: 200px;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+}
+
+@media (min-width: $breakpoint-tablet) {
+}
+
+@media (min-width: $breakpoint-desktop) {
+}
