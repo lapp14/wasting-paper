@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Head from "next/head";
-import Link from "next/link";
 import { getAllPosts } from "../../lib/api";
+import Post from "../../src/components/post";
 
 function Posts({ posts }) {
   return (
@@ -13,27 +13,10 @@ function Posts({ posts }) {
       <div className="posts">
         <h1>Posts</h1>
 
-        {posts.map((post) => {
-          const prettyDate = new Date(post.createdAt).toLocaleString("en-US", {
-            month: "short",
-            day: "2-digit",
-            year: "numeric",
-          });
-
-          return (
-            <article key={post.slug}>
-              <h2>
-                <Link href={post.permalink}>{post.title}</Link>
-              </h2>
-
-              <time dateTime={post.createdAt}>{prettyDate}</time>
-
-              <p>{post.excerpt}</p>
-
-              <Link href={post.permalink}>Read more →</Link>
-            </article>
-          );
-        })}
+        {posts.map((post) => (
+          // eslint-disable-next-line react/jsx-props-no-spreading
+          <Post {...post} key={post.slug} />
+        ))}
       </div>
     </>
   );

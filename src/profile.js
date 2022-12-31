@@ -21,6 +21,7 @@ const profile = {
       alt: "Follow us on Twitter",
     },
   },
+  tagline: "rock band extrordinare.",
 };
 
 export default profile;

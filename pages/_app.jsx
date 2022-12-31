@@ -4,9 +4,11 @@ import Link from "next/link";
 import Image from "next/image";
 import navigation from "../src/navigation";
 import Footer from "../src/components/footer";
+import addTagline from "../src/util/addTagline";
+
 // import Alert from "../src/components/alert";
 
-import logo from "../public/static/img/logo.png";
+import logo from "../public/static/img/wasting-paper-text_sm.png";
 import "../styles/reset.css";
 import "../styles/global.scss";
 import "../styles/header.scss";
@@ -18,7 +20,6 @@ function closeMobileMenu() {
     document.getElementById("menu").checked = false;
   }
 }
-
 function App({ Component, pageProps }) {
   return (
     <>
@@ -27,7 +28,7 @@ function App({ Component, pageProps }) {
         <nav>
           <div className="brand">
             <Link href="/">
-              <Image src={logo} />
+              <Image src={logo} alt={`Wasting Paper${addTagline()}`} />
             </Link>
           </div>
 
