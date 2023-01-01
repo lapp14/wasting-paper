@@ -12,10 +12,11 @@ import appleMusicIcon from "../public/static/img/social/Apple_Music_Icon.gif";
 import youtubeIcon from "../public/static/img/social/social-1_round-youtube.svg";
 
 function Home({ latestPost }) {
+  const pageTitle = `Wasting Paper${addTagline()}`;
   return (
     <>
       <Head>
-        <title>Wasting Paper{addTagline()}</title>
+        <title>{pageTitle}</title>
         <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
       </Head>
       <section>
