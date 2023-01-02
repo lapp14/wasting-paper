@@ -24,6 +24,7 @@ $spacing-xxxl: 2.074rem;
 $color-white: #fff;
 $color-grey-light: #bebebe;
 $color-grey-med: #ccc;
+$color-grey-extra-dark: #222;
 $color-grey-dark: #333;
 $color-black: #000;
 $color-blue: #056ce3;
@@ -36,7 +37,7 @@ $color-alert: #c61515;
 // tablet and desktop screens
 $font-base-size-lg: 18px;
 $font-base-lineheight-lg: 1.7rem;
-$logo-size: 100px;
+$logo-size: 170px;
 
 // mobile screens
 $font-base-size-sm: 16px;
@@ -71,6 +72,8 @@ $size-alert-icon: 2rem;
 
 /** TODO: Add font variables here **/
 
+// css `font` shorthand is: `font: font-style font-variant font-weight font-size/line-height font-family;`
+
 @media (min-width: $breakpoint-mobile) {
 }
 
@@ -91,7 +94,7 @@ $footer-content-max-width: 1200px;
 $color-header: #13c9d2;
 $color-mobile-menu-background: $color-grey-dark;
 $color-mobile-menu-link-bg-hover: lighten($color-grey-dark, 10%);
-$color-mobile-menu-link: $color-grey-light;
+$color-mobile-menu-link: $color-white;
 
 $color-menu-link: $color-grey-dark;
 $color-menu-link-bg-hover: $color-white;

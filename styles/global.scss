@@ -59,17 +59,44 @@ main {
 }
 
 .container {
-    padding: $spacing-m;
     background: $color-background;
     width: 100%;
     margin: 0 auto;
 }
 
-.panel {
+.panel-center {
+    margin: 0 auto;
+}
+
+.panel-flex {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     gap: $spacing-xs;
+}
+
+.paragraph-focus {
+    text-align: center;
+    font-size: $font-size-s;
+    margin: $spacing-s;
+}
+
+section {
+    padding: $spacing-m;
+}
+
+.section__indent {
+    margin-left: $spacing-m;
+}
+
+.section--dark {
+    background: $color-grey-extra-dark;
+    color: $color-white;
+}
+
+.section--news {
+    background: url("../public/static/img/paper-texture.jpg") no-repeat center center;
 }
 
 @media (min-width: $breakpoint-mobile) {

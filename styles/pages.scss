@@ -4,11 +4,27 @@
     width: 180px;
 }
 
+.music-locations {
+    display: flex;
+    flex-direction: row;
+    gap: $spacing-m;
+    justify-content: center;
+    margin: $spacing-s;
+}
+
+.icon-social.music {
+    width: 60px;
+}
+
 @media (min-width: $breakpoint-mobile) {
     .image__polaroid {
         flex-basis: 200px;
         flex-grow: 0;
         flex-shrink: 0;
+    }
+
+    .icon-social.music {
+        width: 120px;
     }
 }
 

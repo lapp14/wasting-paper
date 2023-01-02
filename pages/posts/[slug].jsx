@@ -4,6 +4,7 @@ import Head from "next/head";
 import { getPostBySlug, getAllPosts } from "../../lib/api";
 
 function Post({ post }) {
+  const pageTitle = `Wasting Paper - ${post.title}`;
   const prettyDate = new Date(post.createdAt).toLocaleString("en-US", {
     month: "short",
     day: "2-digit",
@@ -13,7 +14,7 @@ function Post({ post }) {
   return (
     <>
       <Head>
-        <title>Blog Post - {post.title}</title>
+        <title>{pageTitle}</title>
       </Head>
       <div className="post">
         <h1>{post.title}</h1>
