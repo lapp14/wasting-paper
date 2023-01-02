@@ -1,0 +1,27 @@
+@import "_variables.scss";
+
+.post__content {
+}
+
+.post__content hr {
+    border: none;
+    height: 1px;
+    background-color: $color-grey-dark;
+}
+
+.post__header a {
+    color: $color-grey-dark;
+    text-decoration-thickness: 1px;
+}
+
+.post__datetime {
+    font-size: $font-size-xs;
+    line-height: $font-lineheight-xs;
+}
+
+.post_home-footer {
+    margin-top: 20px;
+}
+
+.post__home-view-all {
+}

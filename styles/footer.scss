@@ -78,6 +78,10 @@ footer {
 }
 
 @media (min-width: $breakpoint-mobile) {
+    footer {
+        padding: $footer-padding $footer-padding * 3;
+    }
+
     .footer-container {
         flex-direction: row;
     }

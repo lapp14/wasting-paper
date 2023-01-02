@@ -24,6 +24,7 @@ $spacing-xxxl: 2.074rem;
 $color-white: #fff;
 $color-grey-light: #bebebe;
 $color-grey-med: #ccc;
+$color-grey-extra-dark: #222;
 $color-grey-dark: #333;
 $color-black: #000;
 $color-blue: #056ce3;
@@ -70,6 +71,8 @@ $font-lineheight-xxs: 1rem;
 $size-alert-icon: 2rem;
 
 /** TODO: Add font variables here **/
+
+// css `font` shorthand is: `font: font-style font-variant font-weight font-size/line-height font-family;`
 
 @media (min-width: $breakpoint-mobile) {
 }

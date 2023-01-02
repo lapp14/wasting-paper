@@ -29,7 +29,7 @@ function Home({ latestPost }) {
         </p>
       </section>
 
-      <section>
+      <section className="section--dark">
         <h2>Listen to our music</h2>
         <div className="panel">
           <p className="paragraph-focus">Find our music wherever you listen</p>
@@ -65,11 +65,17 @@ function Home({ latestPost }) {
         </div>
       </section>
 
-      <section>
-        <h2>Latest Post...</h2>
-        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-        <Post {...latestPost} />
-        <a href="posts">View all Posts</a>
+      <section className="section--news">
+        <h2>News</h2>
+        <div className="section__indent">
+          {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+          <Post {...latestPost} noPreview />
+          <div className="post_home-footer">
+            <a className="post__home-view-all" href="posts">
+              View all news
+            </a>
+          </div>
+        </div>
       </section>
     </>
   );

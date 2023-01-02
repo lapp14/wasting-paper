@@ -14,6 +14,7 @@ import "../styles/global.scss";
 import "../styles/header.scss";
 import "../styles/footer.scss";
 import "../styles/pages.scss";
+import "../styles/posts.scss";
 
 function closeMobileMenu() {
   if (typeof document !== "undefined") {
@@ -26,10 +27,12 @@ function App({ Component, pageProps }) {
       <header>
         {/* <Alert /> */}
         <nav>
-          <div className="brand">
-            <Link href="/">
-              <Image src={logo} alt={`Wasting Paper${addTagline()}`} />
-            </Link>
+          <div className="header__container">
+            <div className="brand">
+              <Link href="/">
+                <Image src={logo} alt={`Wasting Paper${addTagline()}`} />
+              </Link>
+            </div>
           </div>
 
           <div className="collapsible-menu">
