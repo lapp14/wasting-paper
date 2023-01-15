@@ -9,15 +9,14 @@ export default function About() {
       <Head>
         <title>About Us</title>
       </Head>
-      <h1>About Us</h1>
       <section>
-        <h2>Our Story</h2>
-        <div className="panel">
+        <h1>Our Story</h1>
+        <div className="panel panel-flex">
           <div className="image__polaroid">
             <Image src={polaroidPhoto} alt="Dan and Julian at the wedding" />
           </div>
           <div className="panel-content--main">
-            <p>
+            <p className="panel__heading-text">
               These two idiots started this band<strong>*</strong>
             </p>
             <p className="side-note">

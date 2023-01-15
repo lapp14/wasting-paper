@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Head from "next/head";
+import Link from "next/link";
 import { getPostBySlug, getAllPosts } from "../../lib/api";
 
 function Post({ post }) {
@@ -16,12 +17,24 @@ function Post({ post }) {
       <Head>
         <title>{pageTitle}</title>
       </Head>
-      <div className="post">
-        <h1>{post.title}</h1>
-        <time dateTime={post.createdAt}>{prettyDate}</time>
-        {/* eslint-disable-next-line react/no-danger */}
-        <div dangerouslySetInnerHTML={{ __html: post.body }} />
-      </div>
+      <section className="section--news">
+        <article className="post__container">
+          <h1 className="post__header">{post.title}</h1>
+
+          <div className="post__content">
+            <time className="post__datetime" dateTime={post.createdAt}>
+              {prettyDate}
+            </time>
+            <hr />
+            <div className="post__body">
+              {/* eslint-disable-next-line react/no-danger */}
+              <div dangerouslySetInnerHTML={{ __html: post.body }} />
+            </div>
+          </div>
+
+          <Link href="/posts">View all posts</Link>
+        </article>
+      </section>
     </>
   );
 }

@@ -1,15 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Head from "next/head";
-import Image from "next/image";
+// import Image from "next/image";
 import Script from "next/script";
 import addTagline from "../src/util/addTagline";
 import Post from "../src/components/post";
 import { getLatestPost } from "../lib/api";
 
-import spotifyIcon from "../public/static/img/social/Spotify_Icon_RGB_Green.png";
-import appleMusicIcon from "../public/static/img/social/Apple_Music_Icon.gif";
-import youtubeIcon from "../public/static/img/social/social-1_round-youtube.svg";
+// import spotifyIcon from "../public/static/img/social/Spotify_Icon_RGB_Green.png";
+// import appleMusicIcon from "../public/static/img/social/Apple_Music_Icon.gif";
+// import youtubeIcon from "../public/static/img/social/social-1_round-youtube.svg";
 
 function Home({ latestPost }) {
   const pageTitle = `Wasting Paper${addTagline()}`;
@@ -22,18 +22,20 @@ function Home({ latestPost }) {
       <section>
         <h1>Wasting Paper</h1>
         <p>
-          Welcome to our website. This website is here to help everyone. It is a
-          great website. Perhaps the best anyone has ever seen. We sure hope
-          this is the case. I am not too sure why I am still typing, to be
-          honest, I feel like this has already gone too far. Oh well...
+          Welcome to the official Wasting Paper band website. We are a Rock band
+          from Hamilton, Ontario. We try to make loud noises that people like to
+          hear. All rights reserved. Patent pending.
         </p>
       </section>
 
       <section className="section--dark">
         <h2>Listen to our music</h2>
         <div className="panel">
-          <p className="paragraph-focus">Find our music wherever you listen</p>
-          <div className="music-locations">
+          {/* <p className="paragraph-focus">Find our music wherever you listen</p> */}
+          <p className="paragraph-focus">
+            New album <strong>Bits &amp; Parts</strong> out Feb 2023.
+          </p>
+          {/* <div className="music-locations">
             <a
               href="https://music.apple.com/ca/album/plastic-ep/1499506097"
               target="_blank"
@@ -61,7 +63,7 @@ function Home({ latestPost }) {
                 <Image src={youtubeIcon} alt="Listen on YouTube" />
               </div>
             </a>
-          </div>
+          </div> */}
         </div>
       </section>
 

@@ -53,6 +53,10 @@ p {
     margin-bottom: $spacing-xxs;
 }
 
+strong {
+    font-weight: 500;
+}
+
 main {
     display: flex;
     flex: 2;
@@ -76,6 +80,12 @@ main {
     gap: $spacing-xs;
 }
 
+.panel__heading-text {
+    text-align: center;
+    font-size: $font-size-l;
+    margin-bottom: $spacing-l;
+}
+
 .paragraph-focus {
     text-align: center;
     font-size: $font-size-s;
@@ -90,6 +100,10 @@ section {
     margin-left: $spacing-m;
 }
 
+.text-center {
+    text-align: center;
+}
+
 .section--dark {
     background: $color-grey-extra-dark;
     color: $color-white;
@@ -99,7 +113,14 @@ section {
     background: url("../public/static/img/paper-texture.jpg") no-repeat center center;
 }
 
+.side-note {
+    font-style: italic;
+}
+
 @media (min-width: $breakpoint-mobile) {
+    .panel-flex {
+        flex-wrap: nowrap;
+    }
 }
 
 @media (min-width: $breakpoint-tablet) {

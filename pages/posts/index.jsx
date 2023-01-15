@@ -10,14 +10,14 @@ function Posts({ posts }) {
       <Head>
         <title>Blog Posts</title>
       </Head>
-      <div className="posts">
+      <section className="post">
         <h1>Posts</h1>
 
         {posts.map((post) => (
           // eslint-disable-next-line react/jsx-props-no-spreading
           <Post {...post} key={post.slug} />
         ))}
-      </div>
+      </section>
     </>
   );
 }
