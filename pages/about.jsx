@@ -7,7 +7,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About Us</title>
+        <title>Wasting Paper - bout Us</title>
       </Head>
       <section>
         <h1>Our Story</h1>

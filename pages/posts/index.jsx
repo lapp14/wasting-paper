@@ -8,7 +8,7 @@ function Posts({ posts }) {
   return (
     <>
       <Head>
-        <title>Blog Posts</title>
+        <title>Wasting Paper - Blog Posts</title>
       </Head>
       <section className="post">
         <h1>Posts</h1>

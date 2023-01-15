@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <title>Contact Us</title>
+        <title>Wasting Paper - Contact Us</title>
       </Head>
       <section>
         <h1>Contact</h1>
