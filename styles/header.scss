@@ -16,7 +16,6 @@ header > nav {
 
 .brand {
     width: $logo-size;
-    height: $logo-size;
     text-decoration: none;
     color: $color-font;
     font-size: $font-size-l;
@@ -43,6 +42,7 @@ header > nav {
 
 .menu-toggle {
     cursor: pointer;
+    font-size: $font-size-m;
     padding: $spacing-s;
     position: relative;
     user-select: none;

@@ -53,26 +53,74 @@ p {
     margin-bottom: $spacing-xxs;
 }
 
+strong {
+    font-weight: 500;
+}
+
 main {
     display: flex;
     flex: 2;
 }
 
 .container {
-    padding: $spacing-m;
     background: $color-background;
     width: 100%;
     margin: 0 auto;
 }
 
-.panel {
+.panel-center {
+    margin: 0 auto;
+}
+
+.panel-flex {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     gap: $spacing-xs;
 }
 
+.panel__heading-text {
+    text-align: center;
+    font-size: $font-size-l;
+    margin-bottom: $spacing-l;
+}
+
+.paragraph-focus {
+    text-align: center;
+    font-size: $font-size-s;
+    margin: $spacing-s;
+}
+
+section {
+    padding: $spacing-m;
+}
+
+.section__indent {
+    margin-left: $spacing-m;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section--dark {
+    background: $color-grey-extra-dark;
+    color: $color-white;
+}
+
+.section--news {
+    background: url("../public/static/img/paper-texture.jpg") no-repeat center center;
+}
+
+.side-note {
+    font-style: italic;
+}
+
 @media (min-width: $breakpoint-mobile) {
+    .panel-flex {
+        flex-wrap: nowrap;
+    }
 }
 
 @media (min-width: $breakpoint-tablet) {

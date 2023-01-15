@@ -1,12 +1,14 @@
 # Wasting Paper
 
+Official band site
 
 ## Development
 
 Run `npm run dev` to start development server
 
-
 ## Todo list...
+- Do SEO and Meta tags
+
 ### Setup
 
 - Create new repo on GitHub
@@ -26,6 +28,8 @@ From your site dashboard on Netlify:
 1. Go to `/admin` and sign up. Check spam folder for email, and confirm
 1. Once able to log in, under Registration preferences, select Invite only.
 
-## Configuration
-
-- Set your business profile up in `profile.js`
+## Components
+### `section`
+- Section elements can have styling
+  - `section--dark`
+  - `section--news`
