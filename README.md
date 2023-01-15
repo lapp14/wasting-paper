@@ -7,6 +7,8 @@ Official band site
 Run `npm run dev` to start development server
 
 ## Todo list...
+- Do SEO and Meta tags
+
 ### Setup
 
 - Create new repo on GitHub
