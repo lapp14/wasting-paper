@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
+import Head from "next/head";
 import Image from "next/image";
 import navigation from "../src/navigation";
 import Footer from "../src/components/footer";
@@ -24,6 +25,12 @@ function closeMobileMenu() {
 function App({ Component, pageProps }) {
   return (
     <>
+      <Head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,100;1,300&display=swap"
+        />
+      </Head>
       <header>
         {/* <Alert /> */}
         <nav>
