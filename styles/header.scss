@@ -70,6 +70,7 @@ input#menu {
     display: flex;
     flex-direction: column;
     padding: 0;
+    z-index: 999;
 }
 
 .menu-content li a {
