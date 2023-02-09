@@ -20,10 +20,10 @@ export default function About() {
               These two idiots started this band<strong>*</strong>
             </p>
             <p className="side-note">
-              <strong>* Note:</strong> John Thomas is a rock band from Hamilton,
-              Ontario. Started by Julian and Dan, they just try and make loud
-              noises that people like to hear. All rights reserved. Patent
-              pending.
+              <strong>* Note:</strong> Wasting Paper is a rock band from
+              Hamilton, Ontario. Started by Julian and Dan, they just try and
+              make loud noises that people like to hear. All rights reserved.
+              Patent pending.
             </p>
           </div>
         </div>

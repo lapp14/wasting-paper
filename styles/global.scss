@@ -63,13 +63,18 @@ main {
 }
 
 .container {
-    background: $color-background;
+    background: none;
     width: 100%;
     margin: 0 auto;
 }
 
+.panel {
+    display: flex;
+    flex-direction: column;
+}
+
 .panel-center {
-    margin: 0 auto;
+    justify-content: center;
 }
 
 .panel-flex {
@@ -86,6 +91,10 @@ main {
     margin-bottom: $spacing-l;
 }
 
+.panel__image {
+    padding: $spacing-m;
+}
+
 .paragraph-focus {
     text-align: center;
     font-size: $font-size-s;
@@ -93,6 +102,7 @@ main {
 }
 
 section {
+    background: $color-background;
     padding: $spacing-m;
 }
 
@@ -109,6 +119,11 @@ section {
     color: $color-white;
 }
 
+.section--dark-translucent {
+    background: $color-grey-extra-dark-translucent;
+    color: $color-white;
+}
+
 .section--news {
     background: url("../public/static/img/paper-texture.jpg") no-repeat center center;
 }
@@ -121,6 +136,15 @@ section {
     .panel-flex {
         flex-wrap: nowrap;
     }
+
+    .panel {
+        flex-direction: row;
+    }
+
+    .panel__image {
+        width: 260px;
+        padding: 0;
+    }
 }
 
 @media (min-width: $breakpoint-tablet) {
@@ -131,10 +155,6 @@ section {
 
     .container {
         width: $content-max-width;
-    }
-
-    .panel {
-        flex-direction: row;
     }
 }
 

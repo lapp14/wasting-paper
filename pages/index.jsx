@@ -1,11 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Head from "next/head";
-// import Image from "next/image";
+import Image from "next/image";
 import Script from "next/script";
 import addTagline from "../src/util/addTagline";
 import Post from "../src/components/post";
 import { getLatestPost } from "../lib/api";
+
+import bitsAndPartsCover from "../public/static/img/covers/Wasting Paper - Bits and Parts (sm).jpg";
 
 // import spotifyIcon from "../public/static/img/social/Spotify_Icon_RGB_Green.png";
 // import appleMusicIcon from "../public/static/img/social/Apple_Music_Icon.gif";
@@ -28,13 +30,27 @@ function Home({ latestPost }) {
         </p>
       </section>
 
-      <section className="section--dark">
+      <section className="section--dark-translucent">
         <h2>Listen to our music</h2>
         <div className="panel">
           {/* <p className="paragraph-focus">Find our music wherever you listen</p> */}
           <p className="paragraph-focus">
             New album <strong>Bits &amp; Parts</strong> out Feb 2023.
           </p>
+          <div className="panel__image">
+            <Image
+              src={bitsAndPartsCover}
+              alt="Dan and Julian at the wedding"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="section--dark">
+        <div className="panel panel-center">
+          <div className="paragraph-focus text-center">
+            Music links coming soon...
+          </div>
           {/* <div className="music-locations">
             <a
               href="https://music.apple.com/ca/album/plastic-ep/1499506097"
