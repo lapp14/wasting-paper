@@ -124,6 +124,12 @@ section {
 .section--dark-translucent {
     background: $color-grey-extra-dark-translucent;
     color: $color-white;
+
+    .paragraph-focus {
+        background: rgba($color: #000000, $alpha: 0.5);
+        padding-top: $spacing-m;
+        padding-bottom: $spacing-m;
+    }
 }
 
 .section--news {

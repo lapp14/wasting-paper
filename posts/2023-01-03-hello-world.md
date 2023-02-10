@@ -1,7 +1,7 @@
 ---
 title: Hello There!
 excerpt: Wasting Paper signing on... This is our first post as an official band.
-createdAt: 2023-01-03
+createdAt: 2023-02-10T17:02:00.000Z
 date: 2023-02-10T17:02:00.000Z
 description: Post 1
 featuredpost: true
