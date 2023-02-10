@@ -96,8 +96,10 @@ main {
 }
 
 .paragraph-focus {
+    flex: 2;
     text-align: center;
-    font-size: $font-size-s;
+    align-self: center;
+    font-size: $font-size-m;
     margin: $spacing-s;
 }
 
