@@ -4,13 +4,18 @@ import Head from "next/head";
 import Link from "next/link";
 import { getPostBySlug, getAllPosts } from "../../lib/api";
 
-function Post({ post }) {
-  const pageTitle = `Wasting Paper - ${post.title}`;
-  const prettyDate = new Date(post.createdAt).toLocaleString("en-US", {
+// Used on `posts/slug` pages
+
+function Post({ title, body, createdAt, featuredImage }) {
+  const pageTitle = `Wasting Paper - ${title}`;
+  const prettyDate = new Date(createdAt).toLocaleString("en-US", {
     month: "short",
     day: "2-digit",
     year: "numeric",
   });
+
+  // eslint-disable-next-line prettier/prettier
+  const htmlBody = `${featuredImage ? `<img src="/${featuredImage}" class="post__featured-image"/>` : ""} ${body} <div style="clear: both"></div>`;
 
   return (
     <>
@@ -19,16 +24,15 @@ function Post({ post }) {
       </Head>
       <section className="section--news">
         <article className="post__container">
-          <h1 className="post__header">{post.title}</h1>
-
+          <h1 className="post__header">{title}</h1>
           <div className="post__content">
-            <time className="post__datetime" dateTime={post.createdAt}>
+            <time className="post__datetime" dateTime={createdAt}>
               {prettyDate}
             </time>
             <hr />
             <div className="post__body">
               {/* eslint-disable-next-line react/no-danger */}
-              <div dangerouslySetInnerHTML={{ __html: post.body }} />
+              <div dangerouslySetInnerHTML={{ __html: htmlBody }} />
             </div>
           </div>
 
@@ -40,15 +44,23 @@ function Post({ post }) {
 }
 
 Post.propTypes = {
-  post: PropTypes.object.isRequired,
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  createdAt: PropTypes.string.isRequired,
+  featuredImage: PropTypes.string,
 };
 
 export default Post;
 
 export function getStaticProps({ params }) {
+  const post = getPostBySlug(params.slug);
+
   return {
     props: {
-      post: getPostBySlug(params.slug),
+      title: post.title,
+      body: post.body,
+      createdAt: post.createdAt,
+      featuredImage: post.featuredimage,
     },
   };
 }

@@ -2,17 +2,29 @@ import React from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
 
-function postContent(excerpt, body, noPreview) {
+function postContent(excerpt, body, featuredImage, noPreview) {
   if (noPreview) {
+    // eslint-disable-next-line prettier/prettier
+    const htmlBody = `${featuredImage ? `<img src="/${featuredImage}" class="post__featured-image featured-image--sm"/>` : ""} ${body} <div style="clear: both"></div>`;
+
     // eslint-disable-next-line react/no-danger
-    return <div dangerouslySetInnerHTML={{ __html: body }} />;
+    return <div dangerouslySetInnerHTML={{ __html: htmlBody }} />;
   }
 
   return <p>{excerpt}</p>;
 }
 
 // `noPreview = true` will show full article, not excerpt
-function Post({ slug, permalink, excerpt, title, createdAt, body, noPreview }) {
+function Post({
+  slug,
+  permalink,
+  excerpt,
+  title,
+  createdAt,
+  body,
+  featuredImage,
+  noPreview,
+}) {
   const prettyDate = new Date(createdAt).toLocaleString("en-US", {
     month: "short",
     day: "2-digit",
@@ -30,7 +42,7 @@ function Post({ slug, permalink, excerpt, title, createdAt, body, noPreview }) {
         </time>
         <hr />
         <div className="post__body">
-          {postContent(excerpt, body, noPreview)}
+          {postContent(excerpt, body, featuredImage, noPreview)}
         </div>
       </div>
 
@@ -47,6 +59,7 @@ Post.propTypes = {
   createdAt: PropTypes.string.isRequired,
   body: PropTypes.string,
   noPreview: PropTypes.bool,
+  featuredImage: PropTypes.string,
 };
 
 export default Post;
