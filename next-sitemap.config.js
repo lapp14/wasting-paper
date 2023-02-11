@@ -18,7 +18,6 @@ const LOW_FREQ = "monthly";
 
 const HIGH_PRIORITY_PATHS = new Set(["/"]);
 const LOW_FREQ_PATHS = new Set(["/about", "/contact"]);
-const X_LOW_FREQ_PATHS = new Set(["/about", "/contact"]);
 
 const getPriority = (config, path) => {
   // Path log good for pipeline info
@@ -47,7 +46,7 @@ const getChangeFreq = (config, path) => {
   }
 
   // posts
-  if (X_LOW_FREQ_PATHS.has(path)) {
+  if (path.startsWith("/posts/")) {
     return X_LOW_FREQ;
   }
 
