@@ -35,7 +35,7 @@ collections:
  
   - name: "site-alert"
     label: "Site Alert (above navbar)"    
-    folder: "posts"
+    folder: "content"
     slug: "alert"
     create: false
     fields:      

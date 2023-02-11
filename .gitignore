@@ -4,3 +4,6 @@ node_modules/
 .DS_Store
 out/
 *Zone.Identifier
+
+public/robots.txt
+public/sitemap*.xml
