@@ -35,7 +35,7 @@ function Home({ latestPost }) {
         <div className="panel">
           {/* <p className="paragraph-focus">Find our music wherever you listen</p> */}
           <p className="paragraph-focus">
-            New album <strong>Bits &amp; Parts</strong> out March 2023.
+            New album <strong>Bits &amp; Parts</strong> out March 10th.
           </p>
           <div className="panel__image">
             <Image
