@@ -85,6 +85,10 @@ main {
     gap: $spacing-xs;
 }
 
+.panel-flex--content-main {
+    flex: 2;
+}
+
 .panel__heading-text {
     text-align: center;
     font-size: $font-size-l;
@@ -142,9 +146,6 @@ section {
 @media (min-width: $breakpoint-mobile) {
     .panel-flex {
         flex-wrap: nowrap;
-    }
-
-    .panel {
         flex-direction: row;
     }
 

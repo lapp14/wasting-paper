@@ -12,7 +12,8 @@
     margin: $spacing-s;
 }
 
-.icon-social.music {
+.icon-social.music,
+.icon-social.music__small {
     width: 60px;
 }
 
@@ -24,11 +25,18 @@
     }
 
     .icon-social.music {
-        width: 120px;
+        width: 100px;
+    }
+
+    .icon-social.music__small {
+        width: 76px;
     }
 }
 
 @media (min-width: $breakpoint-tablet) {
+    .music-locations {
+        gap: $spacing-xxl;
+    }
 }
 
 @media (min-width: $breakpoint-desktop) {
