@@ -8,6 +8,6 @@ featuredimage: img/979c82dc-6a33-47fa-9cc0-27d053cffa5e.png
 ---
 Our first single Wrong to Save Me is out now!
 
-L[https://linktr.ee/wastingpapermusic](<Our first single Wrong to Save Me is out now!  Links to listen in link tree: https://linktr.ee/wastingpapermusic>)<https://linktr.ee/wastingpapermusic>
+C﻿heck out links to listen on linktree: <https://linktr.ee/wastingpapermusic>
 
 [](<Our first single Wrong to Save Me is out now!  Links to listen in link tree: https://linktr.ee/wastingpapermusic>)
