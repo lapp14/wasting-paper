@@ -24,6 +24,13 @@ h1 {
     line-height: $font-lineheight-xxl;
 }
 
+h1.brand-header {
+    font-size: $font-size-l;
+    line-height: $font-lineheight-l;
+    text-align: center;
+    margin: $spacing-l 0;
+}
+
 h2 {
     font-size: $font-size-xl;
     line-height: $font-lineheight-xl;

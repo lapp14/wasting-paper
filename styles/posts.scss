@@ -16,16 +16,25 @@
     line-height: $font-lineheight-xs;
 }
 
-.post_home-footer {
-    margin-top: 20px;
-}
-
 .post__featured-image {
     width: 34%;
     float: left;
+    margin-right: $spacing-m;
+    margin-bottom: $spacing-m;
+}
+
+.post__view-all-link {
+    background: $color-white;
+    padding: $spacing-s;
+    display: inline-block;
 }
 
 /** homepage latest post for now **/
 .featured-image--sm {
     width: 26%;
+}
+
+/** Posts page, list of posts **/
+.posts__list-item {
+    margin-bottom: $spacing-xl;
 }

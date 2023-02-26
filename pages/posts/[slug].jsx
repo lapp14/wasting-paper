@@ -36,7 +36,9 @@ function Post({ title, body, createdAt, featuredImage }) {
             </div>
           </div>
 
-          <Link href="/posts">View all posts</Link>
+          <div className="post__view-all-link">
+            <Link href="/posts">View all posts</Link>
+          </div>
         </article>
       </section>
     </>

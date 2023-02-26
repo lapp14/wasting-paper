@@ -24,13 +24,17 @@ function Home({ latestPost }) {
         <title>{pageTitle}</title>
         <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
       </Head>
-      <section>
-        <h1>Wasting Paper</h1>
+      <section className="section--dark-translucent">
+        <h1 className="brand-header">
+          Welcome to the official Wasting Paper band website
+        </h1>
+      </section>
+      <section className="section--dark text-center">
         <p>
-          Welcome to the official Wasting Paper band website. We are a Rock band
-          from Hamilton, Ontario. We try to make loud noises that people like to
-          hear. All rights reserved. Patent pending.
+          We are a Rock band from Hamilton, Ontario. We try to make loud noises
+          that people like to hear.
         </p>
+        <p className="side-note">All rights reserved. Patent pending.</p>
       </section>
 
       <section className="section--dark-translucent">
@@ -135,9 +139,11 @@ function Home({ latestPost }) {
           {/* eslint-disable-next-line react/jsx-props-no-spreading */}
           <Post {...latestPost} noPreview />
           <div className="post_home-footer">
-            <a className="post__home-view-all" href="posts">
-              View all news
-            </a>
+            <div className="post__view-all-link">
+              <a className="post__home-view-all" href="posts">
+                View all news
+              </a>
+            </div>
           </div>
         </div>
       </section>
