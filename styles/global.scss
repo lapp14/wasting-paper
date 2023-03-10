@@ -90,6 +90,7 @@ main {
     flex-wrap: wrap;
     align-items: center;
     gap: $spacing-xs;
+    padding: $spacing-xxs 0;
 }
 
 .panel-flex--content-main {
@@ -107,16 +108,19 @@ main {
 }
 
 .paragraph-focus {
-    flex: 2;
     text-align: center;
-    align-self: center;
     font-size: $font-size-m;
-    margin: $spacing-s;
 }
 
 section {
     background: $color-background;
     padding: $spacing-m;
+}
+
+.section__content {
+    flex: 2;
+    text-align: center;
+    align-self: center;
 }
 
 .section__indent {
@@ -136,7 +140,7 @@ section {
     background: $color-grey-extra-dark-translucent;
     color: $color-white;
 
-    .paragraph-focus {
+    .translucent-content {
         background: rgba($color: #000000, $alpha: 0.5);
         padding: $spacing-m;
     }
