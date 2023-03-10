@@ -34,30 +34,39 @@ function Home({ latestPost }) {
               <p>Listen wherever you stream</p>
               <div className="music-locations" style={{ marginTop: "32px" }}>
                 <a
-                  href="https://music.apple.com/us/album/wrong-to-save-me/1671198941?i=1671198942"
+                  href="https://music.apple.com/us/album/bits-parts-ep/1672276828"
                   target="_blank"
                   rel="noreferrer"
                 >
                   <div className="icon-social music__small">
-                    <Image src={appleMusicIcon} alt="Listen on Apple Music" />
+                    <Image
+                      src={appleMusicIcon}
+                      alt="Listen to Bits and Parts on Apple Music"
+                    />
                   </div>
                 </a>
                 <a
-                  href="https://open.spotify.com/track/04pTnjhboOZHsbyJFBjlNn?si=zqcTX_o0R-aCKt2eCnER6w"
+                  href="https://open.spotify.com/album/5kg9UTUl4EfGnyltkU9ZCW?si=2AwcNxbVTASshUcQUuum3Q"
                   target="_blank"
                   rel="noreferrer"
                 >
                   <div className="icon-social music__small">
-                    <Image src={spotifyIcon} alt="Listen on Spotify" />
+                    <Image
+                      src={spotifyIcon}
+                      alt="Listen to Bits and Parts on Spotify"
+                    />
                   </div>
                 </a>
                 <a
-                  href="https://www.youtube.com/watch?v=5SD1NsUKHVA"
+                  href="https://music.youtube.com/playlist?list=OLAK5uy_npNITimJ5d5RPv0_TMxBWZEMsFzdpw6sw&feature=share"
                   target="_blank"
                   rel="noreferrer"
                 >
                   <div className="icon-social music__small">
-                    <Image src={youtubeIcon} alt="Listen on YouTube" />
+                    <Image
+                      src={youtubeIcon}
+                      alt="Listen to Bits and Parts on YouTube music"
+                    />
                   </div>
                 </a>
               </div>
