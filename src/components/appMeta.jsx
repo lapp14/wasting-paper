@@ -47,9 +47,10 @@ function AppMeta() {
           __html: `
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-        
-          gtag('config', 'G-3XRJ6G6VM1');`,
+          gtag('js', new Date());        
+          gtag('config', 'G-3XRJ6G6VM1', {
+            page_path: window.location.pathname,
+          });`,
         }}
       />
     </>
