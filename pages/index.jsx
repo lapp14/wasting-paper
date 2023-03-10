@@ -8,7 +8,6 @@ import Post from "../src/components/post";
 import { getLatestPost } from "../lib/api";
 
 import bitsAndPartsCover from "../public/static/img/covers/Wasting Paper - Bits and Parts (sm).jpg";
-import wtsmCover from "../public/static/img/covers/Wasting Paper - Wrong to Save Me (sm).jpg";
 
 import spotifyIcon from "../public/static/img/social/Spotify_Icon_RGB_Green.png";
 import appleMusicIcon from "../public/static/img/social/Apple_Music_Icon.gif";
