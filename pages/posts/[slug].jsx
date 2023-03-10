@@ -62,7 +62,7 @@ export function getStaticProps({ params }) {
       title: post.title,
       body: post.body,
       createdAt: post.createdAt,
-      featuredImage: post.featuredimage,
+      featuredImage: post?.featuredimage ?? null,
     },
   };
 }
