@@ -2,6 +2,8 @@ import React from "react";
 import Head from "next/head";
 import Script from "next/script";
 
+const { GA_MEASUREMENT_ID } = process.env;
+
 /**
  * Global wide application meta, things like fonts or icons
  * @returns App wide global head element
@@ -37,7 +39,7 @@ function AppMeta() {
         <meta name="theme-color" content="#ffffff" />
       </Head>
       <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-3XRJ6G6VM1"
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
         strategy="afterInteractive"
       />
       <Script
@@ -47,9 +49,10 @@ function AppMeta() {
           __html: `
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-        
-          gtag('config', 'G-3XRJ6G6VM1');`,
+          gtag('js', new Date());        
+          gtag('config', '${GA_MEASUREMENT_ID}', {
+            page_path: window.location.pathname,
+          });`,
         }}
       />
     </>
