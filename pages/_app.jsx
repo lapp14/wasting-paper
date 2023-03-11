@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Script from "next/script";
 import PropTypes from "prop-types";
 import Link from "next/link";
 import Image from "next/image";
@@ -19,6 +20,8 @@ import "../styles/footer.scss";
 import "../styles/pages.scss";
 import "../styles/posts.scss";
 
+export const { GA_MEASUREMENT_ID } = process.env;
+
 function closeMobileMenu() {
   if (typeof document !== "undefined") {
     document.getElementById("menu").checked = false;
@@ -38,6 +41,25 @@ function App({ Component, pageProps }) {
 
   return (
     <>
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+      />
+
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}', {
+            page_path: window.location.pathname,
+            });
+          `,
+        }}
+      />
       <AppMeta />
       <header>
         {/* <Alert /> */}
@@ -74,7 +96,6 @@ function App({ Component, pageProps }) {
           <Component {...pageProps} />
         </div>
       </main>
-
       <Footer />
     </>
   );
