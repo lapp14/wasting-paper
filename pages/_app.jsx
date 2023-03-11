@@ -20,7 +20,7 @@ import "../styles/footer.scss";
 import "../styles/pages.scss";
 import "../styles/posts.scss";
 
-export const { GA_MEASUREMENT_ID } = process.env;
+const { GA_MEASUREMENT_ID } = process.env;
 
 function closeMobileMenu() {
   if (typeof document !== "undefined") {
