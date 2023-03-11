@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Script from "next/script";
 
-const { GA_MEASUREMENT_ID } = process.env;
+import { GA_MEASUREMENT_ID } from "../../lib/gtag";
 
 /**
  * Global wide application meta, things like fonts or icons
